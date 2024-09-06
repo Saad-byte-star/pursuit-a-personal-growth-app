@@ -1,0 +1,14 @@
+{
+  "name": "pursuit-app-server",
+  "version": "1.0.0",
+  "description": "a personal growth app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saad Tariq",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.6.1"
+  }
+}
