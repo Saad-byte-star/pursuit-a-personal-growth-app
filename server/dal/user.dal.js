@@ -63,13 +63,7 @@ async function updateUser(req, res) {
         const { Name, Email, Password, Role } = req.body;
 
         // If Password is being updated, hash it before saving
-        const updateData = { Name, Email, Role };
-        if (Password) {
-            const saltRounds = await bcrypt.genSalt(10);
-            const hashedPassword = await bcrypt.hash(Password, saltRounds);
-            updateData.Password = hashedPassword;
-        }
-
+        const updateData = { Name, Email, Password , Role };
         const updatedUser = await User.findByIdAndUpdate(
             userId,
             updateData,
